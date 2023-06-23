@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-observation" version="1.0.0">
+   <name>observation</name>
+   <js-module name="observation" src="www/observation.js">
+      <clobbers target="cordova.plugins.observation" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="observation">
+            <param name="android-package" value="cordova.plugin.observation.observation" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/observation.java" target-dir="src/cordova/plugin/observation/observation" />
+   </platform>
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="observation">
+            <param name="ios-package" value="observation" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/observation.m" />
+   </platform>
+</plugin>
