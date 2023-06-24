@@ -6,5 +6,5 @@ module.exports.coolMethod = function (arg0, success, error) {
 
 module.exports.add = function (arg0,success, error)
 {
-    exec(success, error, 'RhemosBluetooth', 'add', [arg0])
+    exec(success, error, 'observation', 'add', [arg0])
 }
